@@ -414,20 +414,27 @@ func Export(exportDir string, resources Resources) error {
 			return err
 		}
 	}
-
 	for _, resource := range resources {
 		handler, err := Registry.GetHandler(resource.Kind())
 		if err != nil {
 			return err
 		}
-		updatedResource, err := resource.YAML()
+		updatedResource, err := resource.SpecAsJSON()
 		if err != nil {
 			return err
 		}
 		extension := handler.GetExtension()
 		dir := fmt.Sprintf("%s/%s", exportDir, resource.Kind())
+
+		if resource.Kind() == "Dashboard" {
+			folder := resource.GetMetadata("folder")
+			if folder != "General" {
+				dir = fmt.Sprintf("%s/%s", dir, folder)
+			}
+		}
+
 		if _, err := os.Stat(dir); os.IsNotExist(err) {
-			err = os.Mkdir(dir, 0755)
+			err = os.MkdirAll(dir, 0755)
 			if err != nil {
 				return err
 			}

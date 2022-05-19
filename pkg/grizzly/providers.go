@@ -114,7 +114,7 @@ func (r *Resource) Spec() map[string]interface{} {
 }
 
 func (r *Resource) SpecAsJSON() (string, error) {
-	j, err := json.Marshal(r.Spec())
+	j, err := json.MarshalIndent(r.Spec(), "", "  ")
 	if err != nil {
 		return "", err
 	}
