@@ -62,6 +62,23 @@ local convert(main, apiVersion) = {
       if 'grafanaDatasources' in main
       then fromMap(main.grafanaDatasources)
       else {},
+    rules:
+      local folder =
+        if 'grafanaRuleGroupFolder' in main
+        then formatUID(main.grafanaRuleGroupFolder)
+        else 'alert';
+      local fromMap(ruleGroups) = [
+        makeResource(
+          'GrafanaRuleGroup',
+          k,
+          spec=ruleGroups[k],
+          metadata={ folder: folder }
+        )
+        for k in std.objectFields(ruleGroups)
+      ];
+      if 'grafanaRuleGroups' in main
+      then fromMap(main.grafanaRuleGroups)
+      else {},
   },
 
   prometheus:

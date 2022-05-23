@@ -37,7 +37,7 @@ func (h *GrafanaRuleGroupHandler) APIVersion() string {
 
 // GetExtension returns the file name extension for a datasource
 func (h *GrafanaRuleGroupHandler) GetExtension() string {
-	return "yaml"
+	return "json"
 }
 
 const (
