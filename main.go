@@ -1,6 +1,6 @@
 package main
 
-import "github.com/grafana/grizzly/cmd/grr/app"
+import "github.com/bulletRush/grizzly/cmd/grr/app"
 
 func main() {
 	app.Main()

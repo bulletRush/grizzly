@@ -8,7 +8,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/grafana/grizzly/pkg/grizzly"
+	"github.com/bulletRush/grizzly/pkg/grizzly"
 )
 
 // getRemoteDashboard retrieves a dashboard object from Grafana

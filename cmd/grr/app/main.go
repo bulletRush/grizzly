@@ -3,9 +3,9 @@ package app
 import (
 	log "github.com/sirupsen/logrus"
 
+	"github.com/bulletRush/grizzly/pkg/grafana"
+	"github.com/bulletRush/grizzly/pkg/grizzly"
 	"github.com/go-clix/cli"
-	"github.com/grafana/grizzly/pkg/grafana"
-	"github.com/grafana/grizzly/pkg/grizzly"
 )
 
 // Version is the current version of the grr command.

@@ -1,4 +1,4 @@
-module github.com/grafana/grizzly
+module github.com/bulletRush/grizzly
 
 go 1.16
 

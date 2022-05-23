@@ -5,7 +5,7 @@ title: "Installation"
 
 Grizzly is currently available for Linux and MacOS systems.
 
-Download the [latest release](https://github.com/grafana/grizzly/releases).
+Download the [latest release](https://github.com/bulletRush/grizzly/releases).
 
 Select and download an appropriate file for your operating system. Then:
 ```
@@ -16,7 +16,7 @@ If you wish to build the latest (as yet unreleased) version, assuming you have
 a recent Golang installed:
 
 ```
-git clone https://github.com/grafana/grizzly.git
+git clone https://github.com/bulletRush/grizzly.git
 cd grizzly
 make dev
 sudo mv grr /usr/local/bin/grr

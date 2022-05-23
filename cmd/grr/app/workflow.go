@@ -5,9 +5,9 @@ import (
 	"os"
 	"text/tabwriter"
 
+	"github.com/bulletRush/grizzly/pkg/grizzly"
+	"github.com/bulletRush/grizzly/pkg/grizzly/notifier"
 	"github.com/go-clix/cli"
-	"github.com/grafana/grizzly/pkg/grizzly"
-	"github.com/grafana/grizzly/pkg/grizzly/notifier"
 	log "github.com/sirupsen/logrus"
 )
 

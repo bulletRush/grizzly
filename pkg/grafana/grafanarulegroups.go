@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/grafana/grizzly/pkg/grizzly"
+	"github.com/bulletRush/grizzly/pkg/grizzly"
 )
 
 // getRemoteGrafanaRuleGroup retrieves a rule group from Grafana
